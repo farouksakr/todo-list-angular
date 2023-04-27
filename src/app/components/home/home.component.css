@@ -1,0 +1,47 @@
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: rgb(60, 60, 248);
+}
+
+li:nth-child(even) {
+  background-color: #fff;
+  border-left: 6px solid red;
+}
+
+li:nth-child(odd) {
+  background-color: #f2f2f2;
+  border-left: 6px solid blue;
+}
+
+.author-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 80px;
+  right: 0;
+  width: 100%;
+  background-color: #333333;
+  padding: 5px;
+  line-height: 30px;
+}
+
+.fade-in-box {
+  animation: fadeIn 3s;
+  -webkit-animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  -o-animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

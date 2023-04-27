@@ -1,0 +1,16 @@
+<div class="container">
+
+  <div *ngIf="!taskId">
+    <p class="alert alert-danger">There Is No Task Id</p>
+  </div>
+
+  <div *ngIf="taskId">
+    <h2 class="text-center">Details Of {{task.title}}</h2>
+    <input type="text" class="form-control" placeholder="Task Title" [(ngModel)]="task.title" />
+    <textarea class="form-control" placeholder="Write The Task Description" [(ngModel)]="task.description"></textarea>
+
+    <a routerLink="/" class="btn btn-info">Cancel</a>
+    <button class="btn btn-primary" (click)="updateTask()">Update</button>
+    <button class="btn btn-danger" (click)="deleteTask()">Delete</button>
+  </div>
+</div>

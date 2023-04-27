@@ -1,0 +1,30 @@
+<div class="container">
+
+  <blockquote class="blockquote text-center">
+    <p>List Of Tasks</p>
+    <footer class="blockquote-footer">No Pain No Gain !</footer>
+  </blockquote>
+
+  <div *ngIf="tasksService.tasks.length == 0">
+    <p class="alert alert-danger">No Tasks Today.</p>
+  </div>
+
+  <div *ngIf="tasksService.tasks.length != 0">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let task of tasksService.tasks; index as i">
+        <a [routerLink]="['/task', i]">{{ task.title }}</a>
+        <button class="btn btn-danger float-end" (click)="deleteTask(i)">Delete</button>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <a routerLink="/add-task" class="text-white form-control btn btn-secondary my-2">add task</a>
+  </div>
+
+  <div class="author-box text-center fade-in-box">
+      <p class="text-white m-0">To Do List Project With Angular</p>
+      <p class="text-white m-0">Created By: Farouk Sakr</p>
+  </div>
+
+</div>
