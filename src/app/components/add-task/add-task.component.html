@@ -4,10 +4,10 @@
 
   <input #taskTitle type="text" class="form-control" placeholder="write the task title here" />
 
-  <textarea #taskDescription class="form-control" placeholder="write the task description here"></textarea>
+  <textarea #taskDescription class="form-control mt-2" placeholder="write the task description here"></textarea>
 
-  <button class="btn btn-success mt-2" (click)="saveTask(taskTitle, taskDescription)">save</button>
+  <button class="btn btn-success mt-2 mx-1" (click)="saveTask(taskTitle, taskDescription)">save</button>
 
-  <a routerLink="/" class="btn btn-primary mt-2">cancel</a>
+  <a routerLink="/" class="btn btn-primary mt-2 mx-1">cancel</a>
 
 </div>
