@@ -17,7 +17,7 @@ export class AddTaskComponent implements OnInit {
   ngOnInit(): void {}
 
   saveTask(title: any, description: any) {
-    if (title.value = " ") {
+    if (title.value == "") {
       alert('please add your task');
     } else {
       this.tasksService.saveTask(title.value, description.value);
